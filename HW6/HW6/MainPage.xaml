@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HW6"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HW6.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ButtonColor">Green</Color>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+
+        
+
+        <FlexLayout Direction="Column"
+                AlignItems="Stretch"
+                JustifyContent="SpaceEvenly">
+            <Label Text="SPAM ALERT"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+            <Frame OutlineColor="Accent"
+               HasShadow="True"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand">
+                <Button
+                BackgroundColor="{StaticResource ButtonColor}"
+                Text="{x:Static local:Statics.WelcomeMessage}"
+                Clicked="Button_Clicked">
+
+                </Button>
+            </Frame>
+            <Frame>
+                <Label Text="This is a Flex Layout"
+               FontSize="Large" />
+            </Frame>
+            <Frame>
+                <Label Text="Hoorah!" />
+            </Frame>
+        </FlexLayout>
+
+</ContentPage>
